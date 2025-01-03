@@ -2,6 +2,11 @@ const express = require("express");
 const app = express();
 
 app.get("/user", (req,res) =>{
+    console.log(req.query);
+    res.send({firstName : "Alekhya", lastName: "Vishnu"});
+});
+app.get("/user/:user_id/:pwd", (req,res) =>{
+    console.log(req.params);
     res.send({firstName : "Alekhya", lastName: "Vishnu"});
 });
 app.post("/user", (req,res) =>{
