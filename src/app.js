@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 
 app.get("/user", (req,res) =>{
+//route handler
     console.log(req.query);
     res.send({firstName : "Alekhya", lastName: "Vishnu"});
 });
